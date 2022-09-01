@@ -5,23 +5,25 @@ import android.os.Bundle
 import android.widget.TextView
 
 class TelaResultado : AppCompatActivity() {
+
+    var txtNome: TextView? = null
+    var txtEmail: TextView? = null
+    var txtFone: TextView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_resultado)
 
-        val parametros = intent.extras
+        instanciarViews()
 
-        val nomeDigitado = parametros!!.getString("nome")
-        val emailDigitado = parametros.getString("email")
-        val foneDigitado = parametros.getString("fone")
+        txtNome!!.text = intent.getStringExtra("nome")
+        txtEmail!!.text = intent.getStringExtra("email")
+        txtFone!!.text = intent.getStringExtra("fone")
+    }
 
-        val txtNome = findViewById<TextView>(R.id.txtNome)
-        val txtEmail = findViewById<TextView>(R.id.txtEmail)
-        val txtFone = findViewById<TextView>(R.id.txtFone)
-
-        txtNome.text = nomeDigitado
-        txtEmail.text = emailDigitado
-        txtFone.text = foneDigitado
-
+    private fun instanciarViews() {
+        txtNome = findViewById<TextView>(R.id.txtNome)
+        txtEmail = findViewById<TextView>(R.id.txtEmail)
+        txtFone = findViewById<TextView>(R.id.txtFone)
     }
 }
