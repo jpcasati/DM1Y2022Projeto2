@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">DM1Y2022Projeto2</string>
+    <string name="app_name">Cadastro de Aluno</string>
+
+    <array name="cursos">
+        <item>Selecione um curso</item>
+        <item>ADS</item>
+        <item>GTI</item>
+    </array>
 </resources>

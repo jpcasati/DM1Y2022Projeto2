@@ -6,6 +6,11 @@ plugins {
 android {
     compileSdk 32
 
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+
     defaultConfig {
         applicationId "br.edu.mouralacerda.dm1y2022projeto2"
         minSdk 23
